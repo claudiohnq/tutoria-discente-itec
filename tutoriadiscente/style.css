@@ -1,0 +1,1538 @@
+:root{
+    --cor-primaria:#006B92;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+header{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: color-mix(in srgb, #006b92 85%, transparent);
+    z-index: 99;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+header nav a:hover{
+    filter: brightness(80%);
+}
+header img{
+    width: 40px;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+/* Banner: Fundo azul estático com gradiente */
+.banner {
+    position: relative;
+    width: 100%;
+    /* Fundo azul estático com gradiente sutil */
+    background: linear-gradient(to bottom, #006b92, #089dd3);
+    overflow: hidden;
+    display: flex; /* Para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Altura mínima do banner, ajuste conforme necessário */
+    padding-top: 0px;
+    box-sizing: border-box; /* Inclui padding na altura total */
+}
+
+/* Removido: estilos relacionados ao slide de fundo, pois não há mais slides */
+.banner-backgrounds, .background-slide {
+    display: none; /* Garante que as divs não afetem o layout se ainda estiverem no HTML */
+}
+
+
+/* =============== PARTE DO EIXOS =================== */
+
+/* No seu style.css */
+
+.nome {
+    display: flex;
+    flex-direction: row; /* Mantém lado a lado */
+    align-items: center; /* Centraliza verticalmente a imagem e o h1 */
+    justify-content: center; /* Centraliza o conjunto imagem+h1 */
+    gap: 15px; /* Adiciona espaçamento entre a imagem e o h1 */
+    position: relative; /* Mantém para posicionamento da imagem */
+    margin: 70px 0; /* Margem original */
+    flex-wrap: wrap;
+}
+
+.nome img {
+    /* Mantenha o posicionamento absoluto se a intenção for que o h1 ocupe o espaço "normal" */
+    /* Mas ajuste a largura e, se necessário, o left para mover a imagem para a esquerda do texto */
+    position: relative; /* MUDANÇA CRUCIAL: Muda para relative para que a imagem volte ao fluxo flex */
+    max-width: 70px; /* Largura máxima da imagem */
+    height: auto;
+
+    
+    flex-shrink: 0; 
+}
+
+.nome h1 {
+    text-align: center;
+    color: rgb(134, 9, 9); /* Mantenha a cor específica se for por ID, senão use var(--cor-primaria) */
+    font-size: 2rem;
+    margin: 0; /* Remove margens extras */
+}
+
+/* Para o estilo que você tem nos h1 dos eixos (como #PC_eixo h1) */
+#PC_eixo h1 {
+    color: #27B2B9; /* Cor do Pré-Cálculo */
+    /* Garanta que não haja nenhum margin-left ou padding-left que empurre o texto para cima do ícone */
+}
+/* Repita para outros IDs de eixo se tiver cores específicas */
+#IB_eixo h1 { color: #944BBB; }
+#FI_eixo h1 { color: #FB3640; }
+#QI_eixo h1 { color: #439544; }
+
+
+
+.eixos {
+    max-width: 900px;
+    margin: auto; 
+    padding: 12vh 6vh 12vh 6vh;  
+}
+
+.eixos p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.list {
+padding-left: 20px;
+margin-bottom: 30px;
+}
+
+.list-element {
+margin-bottom: 8px;
+}
+
+
+/* =============== PARTE DO EIXOS =================== */
+
+
+
+
+/* .banner .shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Sombra preta sutil para dar profundidade ao fundo azul
+    position: absolute;
+    z-index: 0;
+ */
+
+
+/* Estilos do conteúdo central do banner (banner-content) */
+.banner .center { /* Renomeado para .banner-content no HTML, mas aqui está como .banner .center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Mantido relative para z-index */
+    z-index: 2; /* Acima da sombra */
+    max-width: 800px; /* Largura máxima para o conteúdo central */
+    padding: 20px; /* Padding ajustado para o conteúdo */
+    color: #FFF; /* Cor do texto padrão para contrastar com o fundo azul */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+.banner-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
+    height: 60px; /* Defina uma altura que se encaixe no seu header (menor que 66px seria o ideal) */
+    width: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle; /* Ajuda a alinhar verticalmente se o header for um flex container */
+}
+
+.logo-text img {
+    width: 200px; /* Aumentei o tamanho do logo "Tutoria Discente ITEC" */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.ufpa-text {
+    font-size: 1.3em; /* Aumentei o tamanho do texto UFPA */
+    font-weight: bold;
+    color: #FFF; /* Cor branca para o texto UFPA */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Sombra para o texto */
+}
+/* 
+.quote {
+    font-size: 1.5em; /* Aumentei o tamanho *
+    font-style: normal;
+    font-weight: 600; /* Um pouco mais encorpado *
+    margin-bottom: 25px; /* Mais espaço *
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); */
+
+.description {
+    font-size: 1.2em; /* Aumentei o tamanho */
+    line-height: 1.6; /* Mais espaçamento entre linhas */
+    margin-bottom: 45px; /* Mais espaço */
+    color: #FFF; /* Texto branco */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Estilo do botão de ação */
+.action-button .btn-primary {
+    display: inline-block;
+    background-color: #FFF; /* Fundo branco para o botão */
+    color: var(--cor-primaria); /* Texto azul primário */
+    padding: 18px 35px; /* Botão maior */
+    border-radius: 50px; /* Bordas bem arredondadas (pílula) */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Texto maior */
+    transition: all 0.3s ease;
+    margin-bottom: 50px; /* Espaço abaixo do botão */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra para o botão */
+}
+
+.action-button .btn-primary:hover {
+    background-color: var(--cor-primaria); /* Fundo azul no hover */
+    color: #FFF; /* Texto branco no hover */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
+}
+
+/* Estilos dos links de redes sociais e contato */
+.social-links {
+    display: flex;
+    flex-wrap: wrap; /* Para quebrar linha em telas pequenas */
+    justify-content: center;
+    gap: 30px; /* Mais espaçamento entre os ícones */
+    margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #FFF;
+    color: var(--cor-primaria);
+    font-size: 2.2em;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.social-icon:hover {
+    background-color: var(--cor-primaria); /* Fundo azul no hover */
+    color: #FFF; /* Ícone branco no hover */
+    transform: translateY(-5px) scale(1.05); /* Efeito de subir e crescer */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* FIM DOS ESTILOS DO NOVO BANNER */
+
+
+
+/* Estilos Base para o Card (Mobile-First) */
+.swiper-slide.tutor-card {
+    background-color: #01526f; /* Fundo mais escuro para o card */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 320px; /* Altura mínima para mobile */
+    justify-content: center;
+    /* IMPORTANTE: Deixe o Swiper controlar a largura. 
+       Não defina width ou max-width aqui. */
+}
+
+.tutor-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--cor-primaria);
+}
+
+.tutor-card h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+.tutor-card .curso {
+    font-size: 0.9em;
+    color: #0096CC; /* Cor primária para o curso */
+    margin-bottom: 10px;
+}
+
+.tutor-card .descricao {
+    font-size: 0.85em;
+    color: #ffffff;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+
+/* Media Queries para Responsividade (telas maiores) */
+
+/* Estilos para telas médias (ex: Tablets > 768px) */
+@media screen and (min-width: 768px) {
+    .swiper-slide.tutor-card {
+        padding: 25px;
+        min-height: 380px;
+    }
+
+    .tutor-card img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .tutor-card h3 {
+        font-size: 1.6em;
+    }
+
+    .tutor-card .curso {
+        font-size: 1em;
+    }
+
+    .tutor-card .descricao {
+        font-size: 0.9em;
+    }
+    .swiper.tutores-swiper {
+    width: 100%;
+    max-width: 500px; /* Largura máxima do carrossel */
+    margin: 0 auto;
+    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
+    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+}
+}
+
+/* Estilos para telas grandes (ex: Desktops > 1024px) */
+@media screen and (min-width: 1024px) {
+    .swiper-slide.tutor-card {
+        padding: 30px;
+        min-height: 400px;
+    }
+
+    .tutor-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tutor-card h3 {
+        font-size: 1.8em;
+    }
+
+    .tutor-card .curso {
+        font-size: 1.1em;
+    }
+
+    .tutor-card .descricao {
+        font-size: 0.95em;
+    }
+    .swiper.tutores-swiper {
+    width: 100%;
+    max-width: 1023px; /* Largura máxima do carrossel */
+    margin: 0 auto;
+    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
+    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+}
+}
+
+/* Ajustes no contêiner do Swiper */
+.swiper.tutores-swiper {
+    width: 100%;
+    max-width: 110vh; /* Largura máxima do carrossel */
+    margin: 0 auto;
+    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
+    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+}
+
+/* Seção principal do carrossel */
+.tutores-carrossel-section {
+    padding: 40px 0px; /* Padding padrão */
+    background-color: #FFF;
+    text-align: center;
+}
+
+/* Reduz o padding da seção em telas muito pequenas para dar mais espaço ao card */
+@media screen and (max-width: 600px) {
+    .tutores-carrossel-section {
+        padding: 30px 0px;
+    }
+
+.swiper.tutores-swiper {
+    width: 100%;
+    max-width: 310px; /* Largura máxima do carrossel */
+    margin: 0 0px;
+    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
+    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+}
+
+
+}
+
+
+
+
+
+
+
+.inicial {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usando flexbox */
+    flex-direction: column; /* Ajustando a direção para vertical */
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Cor de fundo da página */
+}
+
+.first_topic {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    height: 120px; /* Altura ajustada para o first_topic */
+}
+
+.first_topic .contorno-estatico {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 0;
+    /* Centraliza o contorno estático */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first_topic .circulo {
+    width: 50px;
+    height: 50px;
+    animation: moveUpDown 1.5s infinite alternate ease-in-out;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(10px);
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        -o-transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-2px);
+        -webkit-transform: translateY(-2px);
+        -moz-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+        -o-transform: translateY(-2px);
+    }
+}
+
+.topic {
+    width: 100%;
+    display: block;
+    background-color: var(--cor-primaria);
+    padding: 20px;
+    border-radius: 0px;
+}
+
+.text {
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    border-radius: 0px;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-family: 'Roboto';
+}
+
+.center{ /* Este .center aqui é para o conteúdo principal da página, não para o banner */
+    text-align: justify;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12vh 6vh 12vh 6vh; /* Padding usando vh pode ser muito grande em algumas telas */
+}
+
+.text h4{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--cor-primaria);
+    display: block;
+    width: fit-content;
+    margin: 10vh auto 10vh;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+.lista ul{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.lista li{
+    list-style: none;
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+.text img{
+    margin-right: 10px;
+    width: 25px;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 10px;
+}
+
+#footer_todo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    border-top: 1px solid #ffffff;
+    padding: 10px 30px;
+}
+
+#footer_esquerda {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer_direita h1 {
+    font-size: 40px;
+    color: #333;
+    text-align: right;
+}
+
+.footer_link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 8px;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.footer_link:hover {
+    background-color: #01526f;
+}
+
+#footer_direita {
+    font-family: 'Inter', sans-serif;
+    text-align: right;
+}
+
+#footer_logo img {
+    max-height: 150px;
+    height: auto;
+    width: auto;
+    display: inline-block;
+}
+
+.grid-container {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    line-height: 26px;
+}
+
+.grid-container .linha{
+    display: flex;
+    max-width: 768px;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-container {
+    width: calc(33.33% - 10px);
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 16px;
+    height: 150px;
+    background-color: rgb(255, 252, 252);
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.36));
+}
+
+.flex-container p{
+    font-size: 20px;
+}
+
+.textodescricao{
+    width: calc(100% - 50px);
+    padding: 20px;
+    font-weight: bold;
+}
+.flex-center{
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.flex-container .numero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2357A0;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+
+.custom-style {
+    height: auto;
+    width: 75px;
+    margin-bottom: 32px;
+    color: #DC2626;
+}
+
+.titulo h1{
+    color: var(--cor-primaria);
+    font-size: 35px;
+    font-family: 'Inter';
+    margin-bottom: 10px;
+}
+.titulo p{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.linee{
+    max-width: 700px;
+    width: 100%;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.linee2{
+    width: 5%;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.text-botao{
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-botao .btn-final{
+    display: block;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+/* .logo-eixos ajustes para 3 colunas e centralização */
+.logo-eixos{
+    display: flex;
+    flex-wrap: wrap; /* Permitir quebra de linha */
+    justify-content: center; /* Centralizar itens na linha */
+    align-items: flex-start; /* Alinhar itens pelo topo */
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; /* Centraliza o contêiner 'logo-eixos' */
+    padding: 20px 0; /* Espaçamento interno opcional */
+}
+
+
+
+.logo-eixos .element {
+    text-align: center;
+    width: calc(33.33% - 40px); /* Largura para 3 colunas com margem */
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 20px 30px 20px; /* Margens */
+
+    /* AJUSTES AQUI PARA O ALINHAMENTO INTERNO */
+    display: flex; /* Transforma o .element em um container flexível */
+    flex-direction: column; /* Coloca os itens (img e p) em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens (ícone e texto) */
+    justify-content: flex-start; /* Alinha os itens ao topo do card */
+}
+
+.logo-eixos .element img {
+    width: 100px; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Adiciona espaço ABAIXO do ícone, separando-o do texto */
+}
+
+.logo-eixos .element p {
+    margin-top: 0; /* Garante que não haja margem superior indesejada no parágrafo */
+}
+
+/* Novo estilo para o link dentro do .element */
+.logo-eixos .element a {
+    display: flex; /* Para centralizar o conteúdo do link */
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.hamburguer{
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.duvidas{
+    margin-top: 30px;
+    background-color: color-mix(in srgb, var(--cor-primaria) 20%, transparent);
+    width: 100%;
+    color: #000;
+    height: 100%;
+    padding: 40px 0 30px 0;
+}
+.duvidas h1{
+    margin-bottom: 40px;
+    color: var(--cor-primaria)
+}
+.duvidas h2{
+    text-align: left;
+    margin-bottom: 10px;
+    color: var(--cor-primaria)
+}
+
+.informacoes{
+    display: flex;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.informacoes h2{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.informacoes p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.informacoes li{
+    text-align: left;
+    margin-left: 2%;
+    font-size: 15px;
+    line-height: 25px;
+    list-style: none;
+}
+
+.informacoes .cartao{
+    width: calc(33.33% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F0F0;
+    padding: 0px 20px 15px 20px;
+    border-radius: 10px;
+}
+
+.informacoes .cartao img{
+    width: 17%;
+    position: relative;
+    transform: translateY(-20px)
+}
+
+.caro{
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.caross{
+    margin: 10px 0;
+    display: flex;
+    animation: carrossel 10s infinite linear;
+}
+
+.caross img{
+    margin: 0 10px;
+    width: 80px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40vh; /* Ajuste este valor para a altura do seu header + um pouco de margem */
+    /* Seu header tem 90px de altura, então 100px deve ser o suficiente. */
+}
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 1000px) {
+    .informacoes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacoes .cartao{
+        width: 50%;
+        margin: 30px auto;
+    }
+    /* Ajustes para o logo-eixos em telas menores */
+    .logo-eixos .element {
+        width: calc(50% - 30px); /* 2 colunas */
+        margin: 0 15px 30px 15px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .linha .flex-container {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* Ajustes para o novo banner-content */
+    .banner {
+        min-height: 500px;
+    }
+    .banner .center { /* .banner-content no HTML */
+        flex-direction: column;
+        padding: 15vh 20px; /* Ajuste o padding para responsividade */
+    }
+    .center-img { /* Removido do novo banner, mas mantido se usado em outro lugar */
+        width: auto; /* Pode ser ajustado ou removido se não for mais usado */
+    }
+    .center-text { /* Removido do novo banner, mas mantido se usado em outro lugar */
+        width: 90%;
+        padding-left: 0;
+        padding: 40px 0;
+        text-align: center;
+    }
+    .banner .center .center-text h3,
+    .banner .center .center-text p {
+        /* Estes seletores podem ser removidos se não forem mais usados no novo banner */
+        font-size: unset; /* Redefine ou remove, conforme necessário */
+        margin-bottom: unset;
+        color: unset;
+    }
+
+    .informacoes{
+        flex-direction: column;
+        align-items: center;
+    }
+    .informacoes h2{
+        font-size: 25px;
+    }
+    .informacoes p{
+        font-size: 20px;
+    }
+    .informacoes .cartao{
+        max-width: 500px;
+        width: 100%;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #footer_logo img {
+        max-height: 150px;
+    }
+    #footer_direita h1 {
+        font-size: 30px;
+        color: #333;
+    }
+    /* Ajustes responsivos para o novo banner */
+    .banner {
+        min-height: 450px;
+    }
+    .banner .center {
+        padding: 12vh 15px; /* Ajuste o padding para telas menores */
+    }
+    .icon-header img {
+        width: 70px;
+    }
+    .logo-text img {
+        width: 220px;
+    }
+    .ufpa-text {
+        font-size: 1.1em;
+    }
+    .quote {
+        font-size: 1.5em;
+    }
+    .description {
+        font-size: 1em;
+        margin-bottom: 35px;
+    }
+    .action-button .btn-primary {
+        padding: 12px 25px;
+        font-size: 1.1em;
+        margin-bottom: 35px;
+    }
+    .social-links {
+        gap: 20px;
+    }
+    .social-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 750px) {
+    .hamburguer{
+        display: block;
+        z-index: 1;
+    }
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--cor-primaria);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+    nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    nav.active .hamburguer{
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+    nav.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+    nav.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+    /* Ajustes responsivos para o logo-eixos */
+    .logo-eixos {
+        flex-wrap: wrap; /* Garante quebras de linha em telas menores */
+        justify-content: center; /* Centraliza itens */
+        gap: 20px; /* Espaçamento entre os itens */
+    }
+    .logo-eixos .element {
+        width: calc(50% - 30px); /* 2 colunas */
+        margin: 0 15px 30px 15px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .topic h1{
+        font-size: 24px;
+    }
+    /* .logo-eixos .element{
+        width: calc(50% - 10px);
+    } */
+    .logo-eixos .element img{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .linha .flex-container {
+        width: calc(90%);
+        margin: 10px auto;
+    }
+    .text .lista ul{
+        width: 100%;
+    }
+    /* Ajustes para o logo-eixos */
+    .logo-eixos .element {
+        width: calc(100% - 40px); /* 1 coluna */
+        margin: 0 auto 30px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer_todo{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    #footer_esquerda{
+        width: 100%;
+        text-align: center;
+    }
+    #footer_logo img {
+        max-height: 100px;
+    }
+    #footer_direita h1 {
+        font-size: 30px;
+        margin-right: 10px;
+        color: #333;
+        text-align: center;
+    }
+    .footer_link {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        background-color: var(--cor-primaria);
+        color: white;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+    /* Removido: .logo-eixos media query aqui pois já está em 750px e 640px */
+}
+
+@media (max-width: 480px) {
+    /* Ajustes responsivos para o novo banner */
+    .banner {
+        min-height: 480px;
+        padding-top: 70px;
+    }
+    .banner .center {
+        padding: 10vh 10px; /* Ajuste o padding para telas muito pequenas */
+    }
+    .icon-header img {
+        width: 60px;
+    }
+    .logo-text img {
+        width: 180px;
+    }
+    .ufpa-text {
+        font-size: 1em;
+    }
+    .quote {
+        font-size: 1.3em;
+    }
+    .description {
+        font-size: 0.9em;
+        margin-bottom: 30px;
+    }
+    .action-button .btn-primary {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    .social-links {
+        gap: 15px;
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 400px) {
+    .text-botao .btn-final{
+        font-size: 20px;
+    }
+}
+
+/* =============================== parte do material */
+/* Estilos Gerais para a Seção de Programação no Index.html */
+#programacao-main-section {
+    max-width: 1200px; /* Alinha com o .center do index.html */
+    margin: 50px auto; /* Espaçamento da seção em relação ao conteúdo da página principal */
+    padding: 20px;
+}
+
+/* Estilo para cada bloco de eixo (ex: Eixo de Pré-Cálculo) */
+.eixo-programacao-bloco {
+    margin-bottom: 60px; /* Espaço entre os blocos de diferentes eixos */
+    background-color: #fff; /* Fundo branco para o bloco do eixo */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para o bloco */
+    padding-bottom: 20px; /* Padding interno para a parte de baixo do bloco */
+}
+
+/* Estilo para o cabeçalho de cada eixo (ícone + título) */
+.topico-eixo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-primaria); /* Fundo azul para o cabeçalho do eixo */
+    padding: 15px 20px;
+    border-top-left-radius: 8px; /* Arredonda apenas os cantos superiores */
+    border-top-right-radius: 8px;
+    margin-bottom: 30px; /* Espaço entre o cabeçalho do eixo e as aulas */
+}
+
+.topico-eixo img {
+    margin-right: 15px;
+    width: 40px; /* Tamanho maior para o ícone do eixo */
+    filter: brightness(0) invert(1); /* Deixa o SVG branco se ele for colorido */
+}
+
+.titulo-eixo-programacao {
+    color: #FFF;
+    font-size: 2.2em; /* Tamanho maior para o título do eixo */
+    text-align: center;
+    margin: 0; /* Reseta margem padrão do h1 */
+}
+
+/* Contêiner das aulas de um eixo */
+.conteudo-eixo {
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza dentro do eixo-programacao-bloco */
+    padding: 0 20px; /* Mantém o padding interno horizontal, sem vertical */
+    display: grid; /* Usar grid para organizar as aulas */
+    grid-template-columns: 1fr; /* Uma coluna por padrão */
+    gap: 20px; /* Espaçamento entre as aulas */
+}
+
+
+
+.info-contato {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.info-contato .info-linha {
+    display: flex;
+	align-items: flex-start; /* Alinha ao topo dos elementos na linha */
+    flex-wrap: wrap;
+    gap: 30px; /* Espaço entre o bloco de localização e o bloco de horários */
+        justify-content: center;
+        text-align: center;
+}
+
+.info-contato .info-localizacao {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    flex-shrink: 0; /* Impede que encolha */
+    white-space: nowrap; /* Garante que o texto de localização não quebre */
+    text-align: center;
+}
+
+.info-contato .info-horarios-grupo {
+    display: flex;
+    flex-direction: column; /* Coloca os horários um abaixo do outro */
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.info-contato .info-horario-label {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    white-space: nowrap; /* Impede que o label quebre */
+    font-weight: normal; /* Certifica-se de que não esteja em negrito a menos que queira */
+}
+
+.info-contato .info-horario-primario,
+.info-contato .info-horario-secundario {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-weight: bold; /* Horários em negrito */
+}
+
+
+
+
+
+
+/* Estilo de cada aula individual */
+.aula {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alinha o conteúdo da linha superior */
+    padding-bottom: 20px; /* Padding para a linha divisória */
+    border-bottom: 1px solid #eee; /* Linha divisória entre aulas */
+    padding-top: 20px; /* Padding superior para cada aula */
+}
+
+.aula:first-child {
+    padding-top: 0; /* Remove padding-top da primeira aula para não ter espaço extra */
+}
+
+.aula:last-child {
+    border-bottom: none; /* Remove a linha da última aula */
+    padding-bottom: 0;
+}
+
+.destaque-aula {
+    background-color: #a3dbff;
+    padding: 8px 20px 8px 20px;
+    font-weight: 600; 
+}
+
+.titulo-aula-card {
+    width: 250px;
+    flex-shrink: 0;
+    text-align: left;
+    margin-right: 30px;
+}
+
+.titulo-aula-card h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    color: var(--cor-primaria);
+    margin-bottom: 5px;
+}
+
+.titulo-aula-card h2 {
+    color: #0096CC; /* Um azul mais claro para o dia */
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.titulo-aula-card h3 {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Estilo do bloco de assunto e materiais */
+.assunto-aula-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.assunto-aula-card p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Estilo dos botões de material (Apostila, Slide) */
+.material-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-material {
+    background-color: var(--cor-primaria);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-material:hover {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.btn-material p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Se a tabela do seu CSS é para a grade de horários da programação, esses estilos ainda são válidos para ela */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 50px auto;
+}
+table, th, td {
+    border: 1px solid #000000;
+}
+th, td {
+    padding: 8px 12px;
+    text-align: center;
+}
+.linha-especial, th{
+    background-color: #a2a2a2;
+}
+/* Mantenho estas classes de fonte bold para a tabela, mas removo as cores de background */
+.linha-especial, .ib, .pc, .bio, .fi, .pg, .qi, .feriado, .ai{
+    font-weight: bold;
+}
+
+/* Media Queries para Responsividade (adaptadas para as novas classes) */
+@media screen and (max-width: 900px) {
+    .topico-eixo {
+        padding: 10px 15px;
+        margin-bottom: 25px;
+    }
+    .topico-eixo img {
+        width: 30px;
+        filter: brightness(0) invert(1);
+        margin-right: 10px;
+    }
+    .titulo-eixo-programacao {
+        font-size: 1.8em;
+    }
+    .conteudo-eixo {
+        padding: 15px;
+    }
+    .aula {
+        flex-direction: column; /* Em telas menores, a aula fica em coluna */
+        align-items: center;
+        text-align: center;
+    }
+    .titulo-aula-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .assunto-aula-card {
+        width: 100%;
+        align-items: center;
+    }
+    .assunto-aula-card p {
+        text-align: center;
+    }
+    .material-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #programacao-main-section {
+        margin: 30px auto;
+        padding: 10px;
+    }
+    .topico-eixo img {
+        width: 25px;
+    }
+    .titulo-eixo-programacao {
+        font-size: 1.5em;
+    }
+    .conteudo-eixo {
+        padding: 10px;
+    }
+    .titulo-aula-card h1 {
+        font-size: 2em;
+    }
+    .titulo-aula-card h2 {
+        font-size: 1.2em;
+    }
+    .titulo-aula-card h3 {
+        font-size: 1em;
+    }
+    .assunto-aula-card p {
+        font-size: 1em;
+    }
+    .btn-material {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+
+/* parte do material */
+
+.topico img {
+    margin: 0 20px;
+    width: 32px;
+}
+
+.conteudo {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.aula {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aula .titulo {
+    width: calc(35% - 20px);
+    text-align: center;
+}
+
+.aula .titulo h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.aula .titulo h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #0096CC;
+}
+
+.aula .assunto {
+    width: calc(65% - 20px);
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aula .material {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    gap: 60px;
+    margin: 30px 0;
+    font-weight: bold;
+    color: white;
+}
+
+.aula .material p {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: var(--cor-primaria);
+    transition: all 0.3s ease;
+}
+
+.aula .material p:hover {
+    padding: 8px 18px;
+    color: var(--cor-primaria);
+    background-color: rgba(0, 107, 146, 0.1);
+    border: 2px solid var(--cor-primaria);
+    text-decoration: none;
+}
+
+.material a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+table, th{
+    color: #000;
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: center;
+    background-color: #dadada;
+}
+
+.linha-especial,
+th {
+    background-color: #a2a2a2;
+    font-weight: bold;
+}
+
+

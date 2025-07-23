@@ -1,0 +1,52 @@
+@media (max-width: 900px) {
+    .conteudo {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table {
+        width: 80%;
+        font-size: 2vw;
+        margin: 20px auto;
+    }
+
+    th, td {
+        padding: 0.7vw 1vw;
+    }
+
+    .material a {
+        font-size: 14px;
+    }
+
+    .linha-especial, th {
+        font-size: 2vwpx;
+        padding: 10px;
+    }
+    .aula{
+        flex-direction: column;
+    }
+    .aula .titulo{
+        width: 80%;
+    }
+    .aula .titulo h1{
+        font-size: 40px;
+    }
+    .aula .titulo h2{
+        font-size: 25px;
+    }
+    .aula .assunto{
+        gap:0;
+        margin-top: 0;
+        text-align: center;
+    }
+    .aula .material{
+        justify-content: center;
+        gap: 35px;
+    }
+
+    .topico{
+        font-size: 12px;
+        flex-direction: column;
+    }
+}

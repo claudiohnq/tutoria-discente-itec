@@ -1,0 +1,64 @@
+:root{
+    --cor-primaria: rgb(0 107 146);
+}
+
+*{
+    font-family: 'Roboto';
+}
+
+.hidden {
+    display: none;
+}
+
+.nome {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px; 
+    position: relative;
+    margin: 70px 0; 
+}
+
+.nome img {
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    max-width: 70px; 
+}
+
+.nome h1 {
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.eixos {
+    max-width: 900px;
+    margin: auto; 
+    padding: 20px;  
+}
+
+.eixos h2 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #000; 
+  }
+  
+.eixos p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.list {
+padding-left: 20px;
+margin-bottom: 30px;
+}
+
+.list-element {
+margin-bottom: 8px;
+}
+  
