@@ -343,6 +343,10 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
         width: 120px;
         height: 120px;
     }
+        .aula .titulo {
+        width: 80%;
+        margin: 0 auto;
+    }
 
     .tutor-card h3 {
         font-size: 1.8em;
@@ -362,6 +366,10 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
     overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
 }
+    .aula .titulo {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 /* Ajustes no contêiner do Swiper */
@@ -1529,7 +1537,7 @@ th, td {
 }
 
 .aula .titulo {
-    width: calc(80% - 20px);
+    width: 100%;
     text-align: center;
 }
 
@@ -1555,7 +1563,7 @@ th, td {
 .aula .material {
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: center;
     gap: 60px;
     margin: 30px 0;
     font-weight: bold;
