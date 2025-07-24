@@ -90,17 +90,13 @@ header img{
 
 .nome h1 {
     text-align: center;
-    color: rgb(134, 9, 9); /* Mantenha a cor específica se for por ID, senão use var(--cor-primaria) */
+    color: rgb(0, 0, 0); /* Mantenha a cor específica se for por ID, senão use var(--cor-primaria) */
     font-size: 2rem;
     margin: 0; /* Remove margens extras */
 }
 
-/* Para o estilo que você tem nos h1 dos eixos (como #PC_eixo h1) */
-#PC_eixo h1 {
-    color: #27B2B9; /* Cor do Pré-Cálculo */
-    /* Garanta que não haja nenhum margin-left ou padding-left que empurre o texto para cima do ícone */
-}
-/* Repita para outros IDs de eixo se tiver cores específicas */
+
+#calc_eixo h1 { color: #27B2B9; }
 #IB_eixo h1 { color: #944BBB; }
 #FI_eixo h1 { color: #FB3640; }
 #QI_eixo h1 { color: #439544; }
@@ -302,13 +298,11 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     font-size: 0.85em;
     color: #ffffff;
     line-height: 1.4;
-    flex-grow: 1;
 }
 
 
 /* Media Queries para Responsividade (telas maiores) */
 
-/* Estilos para telas médias (ex: Tablets > 768px) */
 @media screen and (min-width: 768px) {
     .swiper-slide.tutor-card {
         padding: 25px;
@@ -1357,7 +1351,7 @@ th, td {
     background-color: #a2a2a2;
 }
 /* Mantenho estas classes de fonte bold para a tabela, mas removo as cores de background */
-.linha-especial, .ib, .pc, .bio, .fi, .pg, .qi, .feriado, .ai{
+.linha-especial, .ib, .calc, .bio, .fi, .pg, .qi, .feriado, .ai{
     font-weight: bold;
 }
 
