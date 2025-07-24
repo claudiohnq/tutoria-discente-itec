@@ -110,7 +110,7 @@ nav.classList.toggle("active"));
 //         arrows: true,
 //         asNavFor: false,
 //         bullets: false,
-//         autoPlay: false,
+//         auxlay: false,
 //         cssEase: false,
 //         bullletsAling: 'center',
 //         centerPadding: 20,

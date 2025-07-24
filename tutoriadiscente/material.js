@@ -94,15 +94,12 @@ async function loadData() {
 
     html_pag += `
       <div>
-        <div class="topico">
-          <img src="./assets/logo-${eixo}.svg" onerror="this.style.display='none';"/>
-          <h1>Eixo de ${nomeEixoCompleto} – a partir de ${dataInicio}</h1>
-        </div>
         <div class="conteudo">
           <div>${elementos_lista}</div>
         </div>
       </div>
     `;
+
 
     i += qtdAulas + 3;
   }

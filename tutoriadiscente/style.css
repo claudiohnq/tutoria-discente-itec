@@ -9,6 +9,7 @@
     font-family: "Inter";
 }
 
+
 header{
     height: 90px;
     position: fixed;
@@ -101,6 +102,15 @@ header img{
 #FI_eixo h1 { color: #FB3640; }
 #QI_eixo h1 { color: #439544; }
 
+.planilha {
+  /* width: 100%; */
+  max-width: 100vw; /* ou o limite máximo que preferir */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza o conteúdo dentro da div */
+  text-align: center;
+}
 
 
 .eixos {
@@ -312,6 +322,14 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
     overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
 }
+.conteudo {
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 }
 
 /* Estilos para telas grandes (ex: Desktops > 1024px) */
@@ -940,6 +958,15 @@ html {
         height: 55px;
         font-size: 1.8em;
     }
+     .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .table th, .table td {
+    min-width: 100px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -1058,6 +1085,14 @@ html {
 }
 
 @media (max-width: 480px) {
+    .conteudo {
+    max-width: 460px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
     /* Ajustes responsivos para o novo banner */
     .banner {
         min-height: 480px;
@@ -1217,15 +1252,23 @@ html {
 
 
 
-
+.aula .assunto {
+  flex: 1;
+  text-align: center;
+}
 /* Estilo de cada aula individual */
 .aula {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Alinha o conteúdo da linha superior */
-    padding-bottom: 20px; /* Padding para a linha divisória */
-    border-bottom: 1px solid #eee; /* Linha divisória entre aulas */
-    padding-top: 20px; /* Padding superior para cada aula */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.aula .titulo h1,
+.aula .titulo h2 {
+  font-size: 2rem;
+  margin: 0;
 }
 
 .aula:first-child {
@@ -1314,14 +1357,18 @@ html {
     line-height: 1;
 }
 
-/* Se a tabela do seu CSS é para a grade de horários da programação, esses estilos ainda são válidos para ela */
 table {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
-    margin: 50px auto;
+    overflow-x: auto;
+    display: block;
 }
 table, th, td {
     border: 1px solid #000000;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;
 }
 th, td {
     padding: 8px 12px;
@@ -1334,6 +1381,59 @@ th, td {
 .linha-especial, .ib, .calc, .bio, .fi, .pg, .qi, .feriado, .ai{
     font-weight: bold;
 }
+
+#tabela {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#tabela th, #tabela td {
+  padding: 4px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #tabela th, #tabela td {
+    font-size: 12px;
+    padding: 2px;
+  }
+
+@media (max-width: 768px) {
+  .aula {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .aula .titulo h1 {
+    font-size: 1.5rem;
+  }
+
+  .aula .titulo h2 {
+    font-size: 1.2rem;
+  }
+
+  .aula .assunto p {
+    font-size: 0.9rem;
+  }
+}
+
+}
+
+@media (max-width: 480px) {
+  #tabela th, #tabela td {
+    font-size: 10px;
+    padding: 1px;
+  }
+}
+
+
+
+
+
 
 /* Media Queries para Responsividade (adaptadas para as novas classes) */
 @media screen and (max-width: 900px) {
@@ -1352,11 +1452,9 @@ th, td {
     .conteudo-eixo {
         padding: 15px;
     }
-    .aula {
-        flex-direction: column; /* Em telas menores, a aula fica em coluna */
-        align-items: center;
-        text-align: center;
-    }
+
+    
+    
     .titulo-aula-card {
         width: 100%;
         margin-right: 0;
@@ -1417,7 +1515,7 @@ th, td {
 }
 
 .conteudo {
-    max-width: 1000px;
+    max-width: 768px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 8px;
@@ -1425,8 +1523,8 @@ th, td {
 }
 
 .aula {
-    display: flex;
-    flex-direction: row;
+    display: column;
+    justify-items: center;
     align-items: center;
 }
 
