@@ -127,18 +127,6 @@ margin-bottom: 8px;
 
 /* =============== PARTE DO EIXOS =================== */
 
-
-
-
-/* .banner .shadow {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2); /* Sombra preta sutil para dar profundidade ao fundo azul
-    position: absolute;
-    z-index: 0;
- */
-
-
 /* Estilos do conteúdo central do banner (banner-content) */
 .banner .center { /* Renomeado para .banner-content no HTML, mas aqui está como .banner .center */
     display: flex;
@@ -178,14 +166,6 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     color: #FFF; /* Cor branca para o texto UFPA */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Sombra para o texto */
 }
-/* 
-.quote {
-    font-size: 1.5em; /* Aumentei o tamanho *
-    font-style: normal;
-    font-weight: 600; /* Um pouco mais encorpado *
-    margin-bottom: 25px; /* Mais espaço *
-    color: #FFF;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); */
 
 .description {
     font-size: 1.2em; /* Aumentei o tamanho */
@@ -609,7 +589,7 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .flex-container {
