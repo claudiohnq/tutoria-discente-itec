@@ -72,7 +72,7 @@ header.innerHTML = `
         <ul class="nav-list">
             <li><a href="${urls}index.html">Página inicial</a></li>
             <li><a href="${urls}#eixosTutorados">Eixos</a></li>
-            <li><a href="${urls}#tutores">Tutores</a></li>
+            <li><a href="${urls}#equipe">Equipe</a></li>
             <li><a href="${urls}#material">Material Didático</a></li>
         </ul>
     </nav>

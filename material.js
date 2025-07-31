@@ -111,62 +111,62 @@ async function loadData() {
 
 
 
-function carregarCSV() {
-    fetch(csvURL)
-        .then(response => response.text())
-        .then(csvData => {
-            const linhas = csvData.trim().split('\n').map(l => l.split(',').map(c => c.trim()));
-            const tableHead = document.querySelector('#tabela thead');
-            const tableBody = document.querySelector('#tabela tbody');
+// function carregarCSV() {
+//     fetch(csvURL)
+//         .then(response => response.text())
+//         .then(csvData => {
+//             const linhas = csvData.trim().split('\n').map(l => l.split(',').map(c => c.trim()));
+//             const tableHead = document.querySelector('#tabela thead');
+//             const tableBody = document.querySelector('#tabela tbody');
 
-            tableHead.innerHTML = '';
-            tableBody.innerHTML = '';
+//             tableHead.innerHTML = '';
+//             tableBody.innerHTML = '';
 
-            const headers = linhas[1].slice(2); // ignora Semana e Horário
-            const headRow = document.createElement('tr');
+//             const headers = linhas[1].slice(2); // ignora Semana e Horário
+//             const headRow = document.createElement('tr');
 
-            const semanaTh = document.createElement('th');
-            semanaTh.textContent = 'Semana';
-            headRow.appendChild(semanaTh);
+//             const semanaTh = document.createElement('th');
+//             semanaTh.textContent = 'Semana';
+//             headRow.appendChild(semanaTh);
 
-            const horarioTh = document.createElement('th');
-            horarioTh.textContent = 'Horário';
-            headRow.appendChild(horarioTh);
+//             const horarioTh = document.createElement('th');
+//             horarioTh.textContent = 'Horário';
+//             headRow.appendChild(horarioTh);
 
-            headers.forEach(dia => {
-                const th = document.createElement('th');
-                th.textContent = dia;
-                headRow.appendChild(th);
-            });
+//             headers.forEach(dia => {
+//                 const th = document.createElement('th');
+//                 th.textContent = dia;
+//                 headRow.appendChild(th);
+//             });
 
-            tableHead.appendChild(headRow);
+//             tableHead.appendChild(headRow);
 
-            let semanaAtual = '';
-            let linhasGrupo = [];
+//             let semanaAtual = '';
+//             let linhasGrupo = [];
 
-            for (let i = 2; i < linhas.length; i++) {
-                const linha = linhas[i];
-                const nomeSemana = linha[0];
+//             for (let i = 2; i < linhas.length; i++) {
+//                 const linha = linhas[i];
+//                 const nomeSemana = linha[0];
 
-                if (nomeSemana && nomeSemana !== semanaAtual) {
-                    if (linhasGrupo.length > 0) {
-                        adicionarGrupo(semanaAtual, linhasGrupo, tableBody);
-                        linhasGrupo = [];
-                    }
-                    semanaAtual = nomeSemana;
-                }
+//                 if (nomeSemana && nomeSemana !== semanaAtual) {
+//                     if (linhasGrupo.length > 0) {
+//                         adicionarGrupo(semanaAtual, linhasGrupo, tableBody);
+//                         linhasGrupo = [];
+//                     }
+//                     semanaAtual = nomeSemana;
+//                 }
 
-                linhasGrupo.push(linha);
-            }
+//                 linhasGrupo.push(linha);
+//             }
 
-            if (linhasGrupo.length > 0) {
-                adicionarGrupo(semanaAtual, linhasGrupo, tableBody);
-            }
-        })
-        .catch(error => {
-            console.error('Erro ao carregar CSV:', error);
-        });
-}
+//             if (linhasGrupo.length > 0) {
+//                 adicionarGrupo(semanaAtual, linhasGrupo, tableBody);
+//             }
+//         })
+//         .catch(error => {
+//             console.error('Erro ao carregar CSV:', error);
+//         });
+// }
 
 function adicionarGrupo(semana, linhas, tableBody) {
     linhas.forEach((linha, index) => {

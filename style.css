@@ -42,47 +42,40 @@ header img{
     list-style: none;
 }
 
-/* Banner: Fundo azul estático com gradiente */
 .banner {
     position: relative;
     width: 100%;
-    /* Fundo azul estático com gradiente sutil */
     background: linear-gradient(to bottom, #006b92, #089dd3);
     overflow: hidden;
     display: flex; /* Para centralizar o conteúdo */
     justify-content: center;
     align-items: center;
-    min-height: 90vh; /* Altura mínima do banner, ajuste conforme necessário */
+    min-height: 90vh;
     padding-top: 0px;
-    box-sizing: border-box; /* Inclui padding na altura total */
+    box-sizing: border-box;
 }
 
-/* Removido: estilos relacionados ao slide de fundo, pois não há mais slides */
 .banner-backgrounds, .background-slide {
-    display: none; /* Garante que as divs não afetem o layout se ainda estiverem no HTML */
+    display: none;
 }
 
 
 /* =============== PARTE DO EIXOS =================== */
 
-/* No seu style.css */
-
 .nome {
     display: flex;
-    flex-direction: row; /* Mantém lado a lado */
-    align-items: center; /* Centraliza verticalmente a imagem e o h1 */
-    justify-content: center; /* Centraliza o conjunto imagem+h1 */
-    gap: 15px; /* Adiciona espaçamento entre a imagem e o h1 */
-    position: relative; /* Mantém para posicionamento da imagem */
-    margin: 70px 0; /* Margem original */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+    margin: 70px 0;
     flex-wrap: wrap;
 }
 
 .nome img {
-    /* Mantenha o posicionamento absoluto se a intenção for que o h1 ocupe o espaço "normal" */
-    /* Mas ajuste a largura e, se necessário, o left para mover a imagem para a esquerda do texto */
-    position: relative; /* MUDANÇA CRUCIAL: Muda para relative para que a imagem volte ao fluxo flex */
-    max-width: 70px; /* Largura máxima da imagem */
+    position: relative;
+    max-width: 70px;
     height: auto;
 
     
@@ -91,9 +84,9 @@ header img{
 
 .nome h1 {
     text-align: center;
-    color: rgb(0, 0, 0); /* Mantenha a cor específica se for por ID, senão use var(--cor-primaria) */
+    color: rgb(0, 0, 0);
     font-size: 2rem;
-    margin: 0; /* Remove margens extras */
+    margin: 0;
 }
 
 
@@ -101,16 +94,6 @@ header img{
 #IB_eixo h1 { color: #944BBB; }
 #FI_eixo h1 { color: #FB3640; }
 #QI_eixo h1 { color: #439544; }
-
-.planilha {
-  /* width: 100%; */
-  max-width: 100vw; /* ou o limite máximo que preferir */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centraliza o conteúdo dentro da div */
-  text-align: center;
-}
 
 
 .eixos {
@@ -137,18 +120,17 @@ margin-bottom: 8px;
 
 /* =============== PARTE DO EIXOS =================== */
 
-/* Estilos do conteúdo central do banner (banner-content) */
-.banner .center { /* Renomeado para .banner-content no HTML, mas aqui está como .banner .center */
+.banner .center {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative; /* Mantido relative para z-index */
-    z-index: 2; /* Acima da sombra */
-    max-width: 800px; /* Largura máxima para o conteúdo central */
-    padding: 20px; /* Padding ajustado para o conteúdo */
-    color: #FFF; /* Cor do texto padrão para contrastar com o fundo azul */
-    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+    position: relative; 
+    z-index: 2; 
+    max-width: 800px; 
+    padding: 20px; 
+    color: #FFF;
+    margin: 0 auto;
 }
 
 .banner-header {
@@ -158,62 +140,61 @@ margin-bottom: 8px;
     margin-bottom: 30px;
 }
 
-header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
-    height: 60px; /* Defina uma altura que se encaixe no seu header (menor que 66px seria o ideal) */
-    width: auto; /* Mantém a proporção da imagem */
-    vertical-align: middle; /* Ajuda a alinhar verticalmente se o header for um flex container */
+header a svg {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
 }
 
 .logo-text img {
-    width: 200px; /* Aumentei o tamanho do logo "Tutoria Discente ITEC" */
+    width: 200px; 
     height: auto;
     margin-bottom: 5px;
 }
 
 .ufpa-text {
-    font-size: 1.3em; /* Aumentei o tamanho do texto UFPA */
+    font-size: 1.3em; 
     font-weight: bold;
-    color: #FFF; /* Cor branca para o texto UFPA */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Sombra para o texto */
+    color: #FFF; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); 
 }
 
 .description {
-    font-size: 1.2em; /* Aumentei o tamanho */
-    line-height: 1.6; /* Mais espaçamento entre linhas */
-    margin-bottom: 45px; /* Mais espaço */
-    color: #FFF; /* Texto branco */
+    font-size: 1.2em;
+    line-height: 1.6; 
+    margin-bottom: 45px; 
+    color: #FFF; 
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Estilo do botão de ação */
 .action-button .btn-primary {
     display: inline-block;
-    background-color: #FFF; /* Fundo branco para o botão */
-    color: var(--cor-primaria); /* Texto azul primário */
-    padding: 18px 35px; /* Botão maior */
-    border-radius: 50px; /* Bordas bem arredondadas (pílula) */
+    background-color: #FFF;
+    color: var(--cor-primaria);
+    padding: 18px 35px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em; /* Texto maior */
+    font-size: 1.2em;
     transition: all 0.3s ease;
-    margin-bottom: 50px; /* Espaço abaixo do botão */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra para o botão */
+    margin-bottom: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .action-button .btn-primary:hover {
-    background-color: var(--cor-primaria); /* Fundo azul no hover */
-    color: #FFF; /* Texto branco no hover */
+    background-color: var(--cor-primaria);
+    color: #FFF;
     box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    transform: translateY(-2px); /* Pequeno efeito de elevação */
+    transform: translateY(-2px);
 }
 
-/* Estilos dos links de redes sociais e contato */
 .social-links {
     display: flex;
-    flex-wrap: wrap; /* Para quebrar linha em telas pequenas */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* Mais espaçamento entre os ícones */
-    margin-top: 20px; /* Espaço acima dos ícones */
+    gap: 30px;
+    margin-top: 20px;
 }
 
 .social-icon {
@@ -236,19 +217,50 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
 }
 
 .social-icon:hover {
-    background-color: var(--cor-primaria); /* Fundo azul no hover */
-    color: #FFF; /* Ícone branco no hover */
-    transform: translateY(-5px) scale(1.05); /* Efeito de subir e crescer */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    background-color: var(--cor-primaria);
+    color: #FFF;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
 }
 
-/* FIM DOS ESTILOS DO NOVO BANNER */
+/* Google Agenda */
+.google-calendar {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.google-calendar iframe {
+    width: 100%;
+    height: 600px;
+}
 
 
 
-/* Estilos Base para o Card (Mobile-First) */
+/* Media Queries para Responsividade da Agenda */
+@media screen and (max-width: 900px) {
+    .google-calendar iframe {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .google-calendar {
+        padding: 10px;
+    }
+    .google-calendar iframe {
+        height: 400px;
+    }
+}
+
+
 .swiper-slide.tutor-card {
-    background-color: #01526f; /* Fundo mais escuro para o card */
+    background-color: #01526f;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -256,10 +268,8 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: 320px; /* Altura mínima para mobile */
+    min-height: 320px;
     justify-content: center;
-    /* IMPORTANTE: Deixe o Swiper controlar a largura. 
-       Não defina width ou max-width aqui. */
 }
 
 .tutor-card img {
@@ -291,8 +301,6 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
 }
 
 
-/* Media Queries para Responsividade (telas maiores) */
-
 @media screen and (min-width: 768px) {
     .swiper-slide.tutor-card {
         padding: 25px;
@@ -320,7 +328,7 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     max-width: 500px; /* Largura máxima do carrossel */
     margin: 0 auto;
     padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
-    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+    overflow: hidden;
 }
 .conteudo {
     max-width: 650px;
@@ -332,7 +340,6 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
 
 }
 
-/* Estilos para telas grandes (ex: Desktops > 1024px) */
 @media screen and (min-width: 1024px) {
     .swiper-slide.tutor-card {
         padding: 30px;
@@ -361,10 +368,10 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     }
     .swiper.tutores-swiper {
     width: 100%;
-    max-width: 1023px; /* Largura máxima do carrossel */
+    max-width: 1023px;
     margin: 0 auto;
-    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
-    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+    padding-bottom: 50px;
+    overflow: hidden;
 }
     .aula .titulo {
         width: 80%;
@@ -372,23 +379,48 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     }
 }
 
-/* Ajustes no contêiner do Swiper */
+
 .swiper.tutores-swiper {
     width: 100%;
-    max-width: 110vh; /* Largura máxima do carrossel */
+    max-width: 110vh;
     margin: 0 auto;
-    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
-    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+    padding-bottom: 50px;
+    overflow: hidden;
 }
 
 /* Seção principal do carrossel */
 .tutores-carrossel-section {
-    padding: 40px 0px; /* Padding padrão */
+    padding: 40px 0px;
     background-color: #FFF;
     text-align: center;
 }
 
-/* Reduz o padding da seção em telas muito pequenas para dar mais espaço ao card */
+/*  ============= localizacao mapa */
+
+.localizacao-mapa {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ================ fim */
+
 @media screen and (max-width: 600px) {
     .tutores-carrossel-section {
         padding: 30px 0px;
@@ -396,12 +428,11 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
 
 .swiper.tutores-swiper {
     width: 100%;
-    max-width: 310px; /* Largura máxima do carrossel */
+    max-width: 310px;
     margin: 0 0px;
-    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
-    overflow: hidden; /* ESSENCIAL para que os slides não "vazem" */
+    padding-bottom: 50px;
+    overflow: hidden;
 }
-
 
 }
 
@@ -414,11 +445,11 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
 .inicial {
     margin: 0;
     padding: 0;
-    display: flex; /* Usando flexbox */
-    flex-direction: column; /* Ajustando a direção para vertical */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff; /* Cor de fundo da página */
+    background-color: #fff;
 }
 
 .first_topic {
@@ -429,7 +460,7 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     align-items: center;
     background-color: var(--cor-primaria);
     padding: 20px;
-    height: 120px; /* Altura ajustada para o first_topic */
+    height: 120px;
 }
 
 .first_topic .contorno-estatico {
@@ -437,7 +468,6 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     width: 50px;
     height: 50px;
     z-index: 0;
-    /* Centraliza o contorno estático */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -494,7 +524,7 @@ header a svg { /* Seleciona a tag <svg> que está dentro de um <a> no header */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 12vh 6vh 12vh 6vh; /* Padding usando vh pode ser muito grande em algumas telas */
+    padding: 12vh 6vh 12vh 6vh;
 }
 
 .text h4{
@@ -699,51 +729,46 @@ footer {
     font-size: 30px;
 }
 
-/* .logo-eixos ajustes para 3 colunas e centralização */
-.logo-eixos{
+.logo-eixos {
     display: flex;
-    flex-wrap: wrap; /* Permitir quebra de linha */
-    justify-content: center; /* Centralizar itens na linha */
-    align-items: flex-start; /* Alinhar itens pelo topo */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
     max-width: 1000px;
     width: 100%;
-    margin: 0 auto; /* Centraliza o contêiner 'logo-eixos' */
-    padding: 20px 0; /* Espaçamento interno opcional */
+    margin: 0 auto;
+    padding: 20px 0;
 }
-
-
 
 .logo-eixos .element {
     text-align: center;
-    width: calc(33.33% - 40px); /* Largura para 3 colunas com margem */
+    width: calc(33.33% - 40px);
     font-size: 20px;
     cursor: pointer;
-    margin: 0 20px 30px 20px; /* Margens */
-
-    /* AJUSTES AQUI PARA O ALINHAMENTO INTERNO */
-    display: flex; /* Transforma o .element em um container flexível */
-    flex-direction: column; /* Coloca os itens (img e p) em coluna */
-    align-items: center; /* Centraliza horizontalmente os itens (ícone e texto) */
-    justify-content: flex-start; /* Alinha os itens ao topo do card */
+    margin: 0 20px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo-eixos .element img {
-    width: 100px; /* Tamanho do ícone */
-    margin-bottom: 10px; /* Adiciona espaço ABAIXO do ícone, separando-o do texto */
+    width: 100px;
+    margin-bottom: 10px;
 }
 
 .logo-eixos .element p {
-    margin-top: 0; /* Garante que não haja margem superior indesejada no parágrafo */
+    margin-top: 0;
 }
 
-/* Novo estilo para o link dentro do .element */
 .logo-eixos .element a {
-    display: flex; /* Para centralizar o conteúdo do link */
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     color: inherit;
 }
+
 
 
 a{
@@ -851,11 +876,9 @@ a{
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 40vh; /* Ajuste este valor para a altura do seu header + um pouco de margem */
-    /* Seu header tem 90px de altura, então 100px deve ser o suficiente. */
+    scroll-padding-top: 40vh; 
 }
 
-/* Estilos responsivos */
 
 @media screen and (max-width: 1000px) {
     .informacoes{
@@ -866,7 +889,7 @@ html {
         width: 50%;
         margin: 30px auto;
     }
-    /* Ajustes para o logo-eixos em telas menores */
+
     .logo-eixos .element {
         width: calc(50% - 30px); /* 2 colunas */
         margin: 0 15px 30px 15px;
@@ -880,30 +903,29 @@ html {
 }
 
 @media screen and (max-width: 850px) {
-    /* Ajustes para o novo banner-content */
     .banner {
-        min-height: 500px;
-    }
-    .banner .center { /* .banner-content no HTML */
-        flex-direction: column;
-        padding: 15vh 20px; /* Ajuste o padding para responsividade */
-    }
-    .center-img { /* Removido do novo banner, mas mantido se usado em outro lugar */
-        width: auto; /* Pode ser ajustado ou removido se não for mais usado */
-    }
-    .center-text { /* Removido do novo banner, mas mantido se usado em outro lugar */
-        width: 90%;
-        padding-left: 0;
-        padding: 40px 0;
-        text-align: center;
-    }
-    .banner .center .center-text h3,
-    .banner .center .center-text p {
-        /* Estes seletores podem ser removidos se não forem mais usados no novo banner */
-        font-size: unset; /* Redefine ou remove, conforme necessário */
-        margin-bottom: unset;
-        color: unset;
-    }
+    min-height: 500px;
+}
+.banner .center {
+    flex-direction: column;
+    padding: 15vh 20px;
+}
+.center-img {
+    width: auto;
+}
+.center-text {
+    width: 90%;
+    padding-left: 0;
+    padding: 40px 0;
+    text-align: center;
+}
+.banner .center .center-text h3,
+.banner .center .center-text p {
+    font-size: unset;
+    margin-bottom: unset;
+    color: unset;
+}
+
 
     .informacoes{
         flex-direction: column;
@@ -930,12 +952,12 @@ html {
         font-size: 30px;
         color: #333;
     }
-    /* Ajustes responsivos para o novo banner */
+
     .banner {
         min-height: 450px;
     }
     .banner .center {
-        padding: 12vh 15px; /* Ajuste o padding para telas menores */
+        padding: 12vh 15px;
     }
     .icon-header img {
         width: 70px;
@@ -966,15 +988,6 @@ html {
         height: 55px;
         font-size: 1.8em;
     }
-     .table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .table th, .table td {
-    min-width: 100px;
-  }
 }
 
 @media (max-width: 750px) {
@@ -1016,11 +1029,11 @@ html {
         transform: rotate(-135deg);
         top: -7px;
     }
-    /* Ajustes responsivos para o logo-eixos */
+
     .logo-eixos {
         flex-wrap: wrap; /* Garante quebras de linha em telas menores */
-        justify-content: center; /* Centraliza itens */
-        gap: 20px; /* Espaçamento entre os itens */
+        justify-content: center;
+        gap: 20px;
     }
     .logo-eixos .element {
         width: calc(50% - 30px); /* 2 colunas */
@@ -1033,9 +1046,7 @@ html {
     .topic h1{
         font-size: 24px;
     }
-    /* .logo-eixos .element{
-        width: calc(50% - 10px);
-    } */
+
     .logo-eixos .element img{
         width: 80px;
     }
@@ -1049,7 +1060,6 @@ html {
     .text .lista ul{
         width: 100%;
     }
-    /* Ajustes para o logo-eixos */
     .logo-eixos .element {
         width: calc(100% - 40px); /* 1 coluna */
         margin: 0 auto 30px auto;
@@ -1089,7 +1099,6 @@ html {
         font-size: 20px;
         transition: background-color 0.3s ease;
     }
-    /* Removido: .logo-eixos media query aqui pois já está em 750px e 640px */
 }
 
 @media (max-width: 480px) {
@@ -1101,13 +1110,12 @@ html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-    /* Ajustes responsivos para o novo banner */
     .banner {
         min-height: 480px;
         padding-top: 70px;
     }
     .banner .center {
-        padding: 10vh 10px; /* Ajuste o padding para telas muito pequenas */
+        padding: 10vh 10px;
     }
     .icon-header img {
         width: 60px;
@@ -1147,56 +1155,53 @@ html {
 }
 
 /* =============================== parte do material */
-/* Estilos Gerais para a Seção de Programação no Index.html */
 #programacao-main-section {
-    max-width: 1200px; /* Alinha com o .center do index.html */
-    margin: 50px auto; /* Espaçamento da seção em relação ao conteúdo da página principal */
+    max-width: 1200px;
+    margin: 50px auto;
     padding: 20px;
 }
 
-/* Estilo para cada bloco de eixo (ex: Eixo de Pré-Cálculo) */
 .eixo-programacao-bloco {
-    margin-bottom: 60px; /* Espaço entre os blocos de diferentes eixos */
-    background-color: #fff; /* Fundo branco para o bloco do eixo */
+    margin-bottom: 60px;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para o bloco */
-    padding-bottom: 20px; /* Padding interno para a parte de baixo do bloco */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
 }
 
-/* Estilo para o cabeçalho de cada eixo (ícone + título) */
 .topico-eixo {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--cor-primaria); /* Fundo azul para o cabeçalho do eixo */
+    background-color: var(--cor-primaria);
     padding: 15px 20px;
-    border-top-left-radius: 8px; /* Arredonda apenas os cantos superiores */
+    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    margin-bottom: 30px; /* Espaço entre o cabeçalho do eixo e as aulas */
+    margin-bottom: 30px;
 }
 
 .topico-eixo img {
     margin-right: 15px;
-    width: 40px; /* Tamanho maior para o ícone do eixo */
-    filter: brightness(0) invert(1); /* Deixa o SVG branco se ele for colorido */
+    width: 40px;
+    filter: brightness(0) invert(1);
 }
 
 .titulo-eixo-programacao {
     color: #FFF;
-    font-size: 2.2em; /* Tamanho maior para o título do eixo */
+    font-size: 2.2em;
     text-align: center;
-    margin: 0; /* Reseta margem padrão do h1 */
+    margin: 0;
 }
 
-/* Contêiner das aulas de um eixo */
 .conteudo-eixo {
     max-width: 1000px;
-    margin: 0 auto; /* Centraliza dentro do eixo-programacao-bloco */
-    padding: 0 20px; /* Mantém o padding interno horizontal, sem vertical */
-    display: grid; /* Usar grid para organizar as aulas */
-    grid-template-columns: 1fr; /* Uma coluna por padrão */
-    gap: 20px; /* Espaçamento entre as aulas */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
+
 
 
 
@@ -1214,25 +1219,25 @@ html {
 
 .info-contato .info-linha {
     display: flex;
-	align-items: flex-start; /* Alinha ao topo dos elementos na linha */
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px; /* Espaço entre o bloco de localização e o bloco de horários */
-        justify-content: center;
-        text-align: center;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
 }
 
 .info-contato .info-localizacao {
     margin: 0;
     padding: 0;
     color: #333;
-    flex-shrink: 0; /* Impede que encolha */
-    white-space: nowrap; /* Garante que o texto de localização não quebre */
+    flex-shrink: 0;
+    white-space: nowrap;
     text-align: center;
 }
 
 .info-contato .info-horarios-grupo {
     display: flex;
-    flex-direction: column; /* Coloca os horários um abaixo do outro */
+    flex-direction: column;
     text-align: left;
     margin: 0;
     padding: 0;
@@ -1244,8 +1249,8 @@ html {
     margin: 0;
     padding: 0;
     color: #333;
-    white-space: nowrap; /* Impede que o label quebre */
-    font-weight: normal; /* Certifica-se de que não esteja em negrito a menos que queira */
+    white-space: nowrap;
+    font-weight: normal;
 }
 
 .info-contato .info-horario-primario,
@@ -1253,8 +1258,9 @@ html {
     margin: 0;
     padding: 0;
     color: #333;
-    font-weight: bold; /* Horários em negrito */
+    font-weight: bold;
 }
+
 
 
 
@@ -1280,7 +1286,7 @@ html {
 }
 
 .aula:first-child {
-    padding-top: 0; /* Remove padding-top da primeira aula para não ter espaço extra */
+    padding-top: 0; /* Remove padding-top da primeira aula */
 }
 
 .aula:last-child {
@@ -1309,7 +1315,7 @@ html {
 }
 
 .titulo-aula-card h2 {
-    color: #0096CC; /* Um azul mais claro para o dia */
+    color: #0096CC;
     font-weight: bold;
     font-size: 1.5em;
     margin-bottom: 5px;
@@ -1365,49 +1371,6 @@ html {
     line-height: 1;
 }
 
-table {
-    width: 100%;
-    max-width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto;
-    display: block;
-}
-table, th, td {
-    border: 1px solid #000000;
-    padding: 8px;
-    text-align: center;
-    word-wrap: break-word;
-}
-th, td {
-    padding: 8px 12px;
-    text-align: center;
-}
-.linha-especial, th{
-    background-color: #a2a2a2;
-}
-/* Mantenho estas classes de fonte bold para a tabela, mas removo as cores de background */
-.linha-especial, .ib, .calc, .bio, .fi, .pg, .qi, .feriado, .ai{
-    font-weight: bold;
-}
-
-#tabela {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-#tabela th, #tabela td {
-  padding: 4px;
-  text-align: center;
-  word-wrap: break-word;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  #tabela th, #tabela td {
-    font-size: 12px;
-    padding: 2px;
-  }
 
 @media (max-width: 768px) {
   .aula {
@@ -1429,21 +1392,7 @@ th, td {
   }
 }
 
-}
 
-@media (max-width: 480px) {
-  #tabela th, #tabela td {
-    font-size: 10px;
-    padding: 1px;
-  }
-}
-
-
-
-
-
-
-/* Media Queries para Responsividade (adaptadas para as novas classes) */
 @media screen and (max-width: 900px) {
     .topico-eixo {
         padding: 10px 15px;
@@ -1590,29 +1539,6 @@ th, td {
     color: white;
     text-decoration: none;
     cursor: pointer;
-}
-
-table {
-    width: 80%;
-    margin: 50px auto;
-    border-collapse: collapse;
-}
-
-table, th{
-    color: #000;
-    border: 1px solid #000;
-}
-
-th, td {
-    padding: 8px 12px;
-    text-align: center;
-    background-color: #dadada;
-}
-
-.linha-especial,
-th {
-    background-color: #a2a2a2;
-    font-weight: bold;
 }
 
 
